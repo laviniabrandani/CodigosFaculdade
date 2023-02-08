@@ -1,0 +1,17 @@
+public class Variaveis {
+    public static void main(String[] args) {
+
+        int janeiro;
+        int fevereiro;
+        int marco;
+
+        janeiro = 15000;
+        fevereiro = 23000;
+        marco = 17000;
+
+        int despesas = janeiro+fevereiro+marco;
+        double media = despesas / 3;
+        System.out.println("A soma é: " + despesas);
+        System.out.println("A media de valor é: " + media);
+    }
+}
