@@ -1,0 +1,12 @@
+public class MostrarNumeros {
+    public static void main(String[] args) {
+        int numeroInicial, numeroFinal;
+
+        numeroInicial = 0;
+        numeroFinal = 10;
+
+        for(int i = numeroInicial; i <= numeroFinal; i++){
+            System.out.println("Numero " + i);
+        }
+    }
+}
