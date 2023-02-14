@@ -1,0 +1,22 @@
+public class MostarNumeros {
+    public static void main(String[] args) {
+        int numeroInicial, numeroFinal;
+
+        numeroInicial = 0;
+        numeroFinal = 20;
+
+        int i = numeroInicial;
+
+        while (i <= numeroFinal){
+            System.out.print("Número " + i);
+
+            boolean numeroPar = i%2 == 0; //resto da divisão inteira %
+            if (numeroPar){
+                System.out.println(" é par!");
+            }else {
+                System.out.println(" é ímpar!");
+            }
+             i++;
+        }
+    }
+}
