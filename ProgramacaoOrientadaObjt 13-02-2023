@@ -20,3 +20,36 @@ public class MostarNumeros {
         }
     }
 }
+
+
+//COM ENTRADA DE DADOS (INPUT)
+
+import java.util.Scanner;
+
+public class MostarNumeros {
+    public static void main(String[] args) {
+
+        int numeroInicial, numeroFinal;
+
+        Scanner ler = new Scanner(System.in);
+
+        System.out.println("numeroInicial: ");
+        numeroInicial = ler.nextInt();
+
+        System.out.println("numeroFinal: ");
+        numeroFinal = ler.nextInt();
+
+        int i = numeroInicial;
+
+        while (i <= numeroFinal){
+            System.out.print("Número " + i);
+            boolean numeroPar = i%2 == 0; //resto da divisão inteira %
+            if (numeroPar){
+                System.out.println(" é par!");
+            }else {
+                System.out.println(" é ímpar!");
+            }
+             i++;
+        }
+    }
+}
