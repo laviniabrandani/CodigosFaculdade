@@ -1,0 +1,94 @@
+import java.util.Scanner;
+
+public class Exercicio1 {
+    public Exercicio1() {
+    }
+
+    public static void main(String[] args) {
+        Scanner ler1 = new Scanner(System.in);
+        System.out.println("Digite o primeiro salário: ");
+        double salario1 = ler1.nextDouble();
+        Scanner ler2 = new Scanner(System.in);
+        System.out.println("Digite o segundo salário: ");
+        double salario2 = ler2.nextDouble();
+        Scanner ler3 = new Scanner(System.in);
+        System.out.println("Digite o terceiro salário: ");
+        double salario3 = ler3.nextDouble();
+        Scanner ler4 = new Scanner(System.in);
+        System.out.println("Digite o quarto salário: ");
+        double salario4 = ler4.nextDouble();
+        Scanner ler5 = new Scanner(System.in);
+        System.out.println("Digite o quinto salário: ");
+        double salario5 = ler5.nextDouble();
+        double mediaSalarial = (salario1 + salario2 + salario3 + salario4 + salario5) / 5.0;
+        System.out.printf("A média de salários desta empresa é R$ %.2f", mediaSalarial);
+    }
+}
+
+2
+
+import java.util.Scanner;
+
+public class Exercicio2 {
+    public Exercicio2() {
+    }
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite o raio: ");
+        double raio = ler.nextDouble();
+        double pi = 3.14;
+        double area = pi * raio * raio;
+        double perimetro = 2.0 * pi * raio;
+        System.out.println("A área é " + area + " cm2");
+        System.out.println("O perimetro é " + perimetro + " cm");
+    }
+}
+
+3
+
+import java.util.Scanner;
+
+public class Exercicio2 {
+    public Exercicio2() {
+    }
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite o raio: ");
+        double raio = ler.nextDouble();
+        double pi = 3.14;
+        double area = pi * raio * raio;
+        double perimetro = 2.0 * pi * raio;
+        System.out.println("A área é " + area + " cm2");
+        System.out.println("O perimetro é " + perimetro + " cm");
+    }
+}
+
+4
+
+import java.util.Scanner;
+
+public class Exercicio4 {
+    public Exercicio4() {
+    }
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite um valor inteiro: ");
+        int x = ler.nextInt();
+
+        while(x != 1) {
+            if (x % 2 == 0) {
+                System.out.print(x /= 2);
+            } else {
+                System.out.print(x = 3 * x + 1);
+            }
+
+            if (x != 1) {
+                System.out.print("->");
+            }
+        }
+
+    }
+}
