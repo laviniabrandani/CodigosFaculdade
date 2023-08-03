@@ -1,0 +1,39 @@
+alunos = []
+
+def cadastro(alunos):
+    dic = {'nome':"", 'bim1': "", 'bim2': ""}
+    dic['nome'] = input("Digite o nome do aluno: ")
+    dic['bim1'] = float(input("Digite a nota do 1° bimestre: "))
+    dic['bim2'] = float(input("Digite a nota do 2° bimestre: "))
+    alunos.append(dic)
+
+def situacao(alunos):
+    i = 0
+    tam = len(alunos)
+    while i < tam:
+        print(alunos[i]['nome'])
+        media = (alunos[i]['bim1'] + alunos[i]['bim2']) / 2
+        if media >= 70:
+            print("APROVADO, a média foi de: ", media)
+        elif media >= 30:
+            print("EM EXAME, a média foi de: ", media)
+        elif media < 30: 
+            print("REPROVADO, a média foi de: ", media)
+        i += 1
+
+def main():
+    opcao = ""
+    while opcao != 0:
+        print("====== MENU =======")
+        print("1 - Cadastrar aluno")
+        print("2 - Verificar situação do aluno")
+        print("0 - Sair")
+        print("===================")
+        opcao = int(input("Digite a opção desejada:"))
+        if opcao == 1:
+            cadastro(alunos)
+        elif opcao == 2:
+            situacao(alunos)
+        else:
+            print("Opção inválida")
+main()
