@@ -1,0 +1,40 @@
+def cadastro():
+    arquivo = open("notas.txt", 'a')
+    nome = input("Digite o nome do aluno: ")
+    bim1 = float(input("Digite a nota do 1° bimestre: "))
+    bim2 = float(input("Digite a nota do 2° bimestre: "))
+    aluno = nome + ',' + str(bim1) + ',' + str(bim2)+ "\n"
+    arquivo.write(aluno)
+    arquivo.close()
+
+def situacao():
+    arquivo = open("notas.txt", 'r')
+    i = 0
+    tam = len(alunos)
+    while i < tam:
+        print(alunos[i]['nome'])
+        media = (alunos[i]['bim1'] + alunos[i]['bim2']) / 2
+        if media >= 70:
+            print("APROVADO, a média foi de: ", media)
+        elif media >= 30:
+            print("EM EXAME, a média foi de: ", media)
+        elif media < 30: 
+            print("REPROVADO, a média foi de: ", media)
+        i += 1
+    arquivo.close()
+def main():
+    opcao = ""
+    while opcao != 0:
+        print("====== MENU =======")
+        print("1 - Cadastrar aluno")
+        print("2 - Verificar situação do aluno")
+        print("0 - Sair")
+        print("===================")
+        opcao = int(input("Digite a opção desejada:"))
+        if opcao == 1:
+            cadastro()
+        elif opcao == 2:
+            situacao()
+        else:
+            print("Opção inválida")
+main()
